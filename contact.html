@@ -2,13 +2,14 @@
 <html>
 <head>
 	<link rel="icon" href="images/logo-1.png">
-<title>TKL Computer</title>
+<title>Contact</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="TKL Store, Computer Store, TKL Computer Store, Computer Shop, TKL Computer Shop, TKL Shop" />
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
+<link href="css/contact.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <!-- custom fontawesome -->
 <script src="https://kit.fontawesome.com/e94d3516c1.js" crossorigin="anonymous"></script>
@@ -20,7 +21,9 @@
 <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="header">
+	
+	<div class="header">
+
 		<div class="container">
 			
 			<div class="logo">
@@ -28,8 +31,9 @@
 			</div>
 			<div class="head-t">
 				<ul class="card">
-					<li><a href="login.html" ><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
-					<li><a href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="loginLi"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
+					<li id ="signLi"><a href="signup.html" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="logoutLi" style="display: none;"><a href="#" onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng Xuất</a></li>
 				</ul>	
 			</div>
 			
@@ -54,7 +58,7 @@
 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
-							<li class=" active"><a href="index.html" class="hyper "><span>Trang Chủ</span></a></li>	
+							<li class=" dropdown"><a href="index.html" class="hyper "><span>Trang Chủ</span></a></li>	
 							
 							<li class="dropdown ">
 								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><i class="fa-solid fa-boxes-stacked"></i><span> Linh Kiện PC<b class="caret"></b></span></a>
@@ -117,7 +121,7 @@
 									</div>	
 								</ul>
 							</li>
-							<li><a href="contact.html" class="hyper"><i class="fa-solid fa-phone"></i><span> Liên Hệ</span></a></li>
+							<li class="active"><a href="contact.html" class="hyper"><i class="fa-solid fa-phone"></i><span> Liên Hệ</span></a></li>
 						</ul>
 					</div>
 					</nav>
@@ -128,7 +132,8 @@
 				<div class="clearfix"></div>
 			</div>		
 </div>
-  <!---->
+
+<script src="./js/LoginStatus.js"></script>
 
 <!-- contact -->
 <div class="contact">

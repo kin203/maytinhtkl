@@ -20,6 +20,7 @@
 <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	
 	<div class="header">
 
 		<div class="container">
@@ -29,8 +30,9 @@
 			</div>
 			<div class="head-t">
 				<ul class="card">
-					<li><a href="login.html" ><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
-					<li><a href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="loginLi"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
+					<li id ="signLi"><a href="signup.html" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="logoutLi" style="display: none;"><a href="#" onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng Xuất</a></li>
 				</ul>	
 			</div>
 			
@@ -129,6 +131,8 @@
 				<div class="clearfix"></div>
 			</div>		
 </div>
+
+<script src="./js/LoginStatus.js"></script>
   <!---->
 <div data-vide-bg="video/video">
     <div class="container">
@@ -459,18 +463,16 @@
 		</div>
 	</div>
 </div>
-<!-- News banner -->
+
 <div class="container">
 	<div class="spec ">
 		<br>
 		<h3>News</h3>
 	</div>
 </div>
-<!-- News banner -->
 
 <!--content-->
-  <!-- Carousel
-    ================================================== -->
+	<!-- ImageSlider -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -492,9 +494,8 @@
           
         </div>
       </div>
-    
     </div>
-<!-- /.carousel -->
+ 	<!-- ImageSlider -->
 
 <!--content-->
 	<div class="product">
@@ -696,7 +697,7 @@
 			<h3>Menu</h3>
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="pccomponent.html">PC Component</a></li>
+				<li><a href="product.html">PC Component</a></li>
 				<li><a href="gaminggear.html">Gaming Gear</a></li>						 
 				<li><a href="contact.html">Contact Us</a></li>
 			</ul>

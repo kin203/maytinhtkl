@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="icon" href="images/logo-1.png">
-<title>TKL Computer</title>
+<title>GPU</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="TKL Store, Computer Store, TKL Computer Store, Computer Shop, TKL Computer Shop, TKL Shop" />
@@ -34,8 +34,9 @@
 			</div>
 			<div class="head-t">
 				<ul class="card">
-					<li><a href="login.html" ><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
-					<li><a href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="loginLi"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
+					<li id ="signLi"><a href="signup.html" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="logoutLi" style="display: none;"><a href="#" onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng Xuất</a></li>
 				</ul>	
 			</div>
 			
@@ -44,101 +45,97 @@
 					<li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
 				</ul>	
 			</div>
-	
-
-			<div class="nav-top">
-				<nav class="navbar navbar-default">
-				
-				<div class="navbar-header nav_2">
-					<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div> 
-
-				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-					<ul class="nav navbar-nav ">
-						<li class=" active"><a href="index.html" class="hyper "><span>Home</span></a></li>	
-						
-						<li class="dropdown ">
-							<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><i class="fa-solid fa-boxes-stacked"></i><span> PC Component<b class="caret"></b></span></a>
-							<ul class="dropdown-menu multi">
-								<div class="row">
-									<div class="col-sm-3">
-										<ul class="multi-column-dropdown">
 		
-											<li><a href="mainboard.html"><i class="fa-solid fa-microchip"></i>Mainboard</a></li>
-											<li><a href="cpu.html"><i class="fa-solid fa-microchip"></i></i>CPU</a></li>
-											<li><a href="ram.html"> <i class="fa-solid fa-memory"></i></i>RAM</a></li>
-											<li><a href="gpu.html"><i class="fa-solid fa-microchip"></i></i>GPU</a></li>
-									
-										</ul>
-									
-									</div>
-									<div class="col-sm-3">
-									
-										<ul class="multi-column-dropdown">
-											<li><a href="ssd.html"><i class="fa-solid fa-hard-drive"></i></i>SSD</a></li>
-											<li><a href="hdd.html"><i class="fa-solid fa-hard-drive"></i></i>HDD</a></li>
-											<li><a href="PowerSupply.html"><i class="fa-solid fa-plug"></i></i>Power Supply</a></li>
-											<li><a href="PCcase.html"><i class="fa-solid fa-computer"></i></i>PC Case</a></li>
-											<li><a href="fan_liquidcooling.html"><i class="fa-solid fa-temperature-low"></i></i>Fan/Liquid Cooling</a></li>
-									
-										</ul>
-									
-									</div>
-									<div class="col-sm-3">
 
-									</div>
-									<div class="clearfix"></div>
-								</div>	
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><i class="fa-solid fa-gears"></i><span> Gaming Gear<b class="caret"></b></span></a>
-							<ul class="dropdown-menu multi multi1">
-								<div class="row">
-									<div class="col-sm-3">
-										<ul class="multi-column-dropdown">
-											<li><a href="minitor.html"><i class="fa-solid fa-desktop"></i></i>Monitor</a></li>
-											<li><a href="keyboard.html"><i class="fa-solid fa-keyboard"></i></i>Keyboard</a></li>
+				<div class="nav-top">
+					<nav class="navbar navbar-default">
+					
+					<div class="navbar-header nav_2">
+						<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div> 
 
-										</ul>
+					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+						<ul class="nav navbar-nav ">
+							<li class=" dropdown"><a href="index.html" class="hyper "><span>Home</span></a></li>	
+							
+							<li class="active ">
+								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><i class="fa-solid fa-boxes-stacked"></i><span> PC Component<b class="caret"></b></span></a>
+								<ul class="dropdown-menu multi">
+									<div class="row">
+										<div class="col-sm-3">
+											<ul class="multi-column-dropdown">
+			
+												<li><a href="mainboard.html"><i class="fa-solid fa-microchip"></i>Mainboard</a></li>
+												<li><a href="cpu.html"><i class="fa-solid fa-microchip"></i></i>CPU</a></li>
+												<li><a href="ram.html"> <i class="fa-solid fa-memory"></i></i>RAM</a></li>
+												<li><a href="gpu.html"><i class="fa-solid fa-microchip"></i></i>GPU</a></li>
 										
-									</div>
-									<div class="col-sm-3">
+											</ul>
 										
-										<ul class="multi-column-dropdown">
-											<li><a href="mouse.html"><i class="fa-sharp fa-solid fa-computer-mouse"></i></i>Mouse</a></li>
-											<li><a href="headset.html"><i class="fa-solid fa-headset"></i></i>Headset</a></li>
-										</ul>
+										</div>
+										<div class="col-sm-3">
 										
-									</div>
-									<div class="col-sm-3">
+											<ul class="multi-column-dropdown">
+												<li><a href="ssd.html"><i class="fa-solid fa-hard-drive"></i></i>SSD</a></li>
+												<li><a href="hdd.html"><i class="fa-solid fa-hard-drive"></i></i>HDD</a></li>
+												<li><a href="PowerSupply.html"><i class="fa-solid fa-plug"></i></i>Power Supply</a></li>
+												<li><a href="PCcase.html"><i class="fa-solid fa-computer"></i></i>PC Case</a></li>
+												<li><a href="fan_liquidcooling.html"><i class="fa-solid fa-temperature-low"></i></i>Fan/Liquid Cooling</a></li>
 										
-									</div>
-									<div class="clearfix"></div>
-								</div>	
-							</ul>
-						</li>
-						<li><a href="contact.html" class="hyper"><i class="fa-solid fa-phone"></i><span> Liên Hệ</span></a></li>
-					</ul>
-				</div>
-				</nav>
-				 <div class="cart" >
-				
-					<span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
-				</div>
-			<div class="clearfix"></div>
-		</div>		
+											</ul>
+										
+										</div>
+										<div class="col-sm-3">
+
+										</div>
+										<div class="clearfix"></div>
+									</div>	
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><i class="fa-solid fa-gears"></i><span> Gaming Gear<b class="caret"></b></span></a>
+								<ul class="dropdown-menu multi multi1">
+									<div class="row">
+										<div class="col-sm-3">
+											<ul class="multi-column-dropdown">
+												<li><a href="minitor.html"><i class="fa-solid fa-desktop"></i></i>Monitor</a></li>
+												<li><a href="keyboard.html"><i class="fa-solid fa-keyboard"></i></i>Keyboard</a></li>
+
+											</ul>
+											
+										</div>
+										<div class="col-sm-3">
+											
+											<ul class="multi-column-dropdown">
+												<li><a href="mouse.html"><i class="fa-sharp fa-solid fa-computer-mouse"></i></i>Mouse</a></li>
+												<li><a href="headset.html"><i class="fa-solid fa-headset"></i></i>Headset</a></li>
+											</ul>
+											
+										</div>
+										<div class="col-sm-3">
+											
+										</div>
+										<div class="clearfix"></div>
+									</div>	
+								</ul>
+							</li>
+							<li><a href="contact.html" class="hyper"><i class="fa-solid fa-phone"></i><span> Liên Hệ</span></a></li>
+						</ul>
+					</div>
+					</nav>
+					 <div class="cart" >
+					
+						<span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+					</div>
+				<div class="clearfix"></div>
+			</div>		
 </div>
-  <!---->
-
-
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-    <script src="js/jquery.vide.min.js"></script>
+<script src="./js/LoginStatus.js"></script>
 </div>
 <div class="product">
     <div class="container">
@@ -156,7 +153,7 @@
                                 </a>
                                 <div class="mid-1">
                                     <div class="women">
-                                        <h6>Card màn hình ASUS TUF Gaming GeForce RTX™ 3060 Ti V2 OC Edition 8GB GDDR6 </h6>							
+                                        <h6>Card màn hình ASUS TUF Gaming RTX™ 3060 Ti V2 OC Edition 8GB GDDR6 </h6>							
                                     </div>
                                     <div class="mid-2">
                                         <p ><em class="item_price">10,990,000 VND</em></p>
@@ -178,7 +175,7 @@
                                 </a>
                                 <div class="mid-1">
                                     <div class="women">
-                                        <h6>VGA ZOTAC GeForce RTX 3060 12GB Twin Edge </h6>							
+                                        <h6>Card Màn Hình ZOTAC GAMING RTX™ 3060 Twin Edge OC </h6>							
                                     </div>
                                     <div class="mid-2">
                                         <p ><em class="item_price">6,990,000 VND</em></p>
@@ -200,7 +197,7 @@
                                 </a>
                                 <div class="mid-1">
                                     <div class="women">
-                                        <h6>Card màn hình ASUS TUF GTX 1660 Super-O6G GAMING </h6>							
+                                        <h6>Card màn hình ASUS TUF GTX™ 1660 Super-O6G GAMING </h6>							
                                     </div>
                                     <div class="mid-2">
                                         <p ><em class="item_price">5,990,000 VND</em></p>
@@ -222,7 +219,7 @@
                                 </a>
                                 <div class="mid-1">
                                     <div class="women">
-                                        <h6>Card Màn Hình MSI GeForce RTX 4080 16GB GAMING X TRIO </h6>							
+                                        <h6>Card Màn Hình MSI GeForce RTX™ 4080 16GB GAMING X TRIO </h6>							
                                     </div>
                                     <div class="mid-2">
                                         <p ><em class="item_price">12,990,000 VND</em></p>

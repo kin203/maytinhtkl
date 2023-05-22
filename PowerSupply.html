@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="icon" href="images/logo-1.png">
-<title>TKL Computer</title>
+<title>Nguồn</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="TKL Store, Computer Store, TKL Computer Store, Computer Shop, TKL Computer Shop, TKL Shop" />
@@ -25,7 +25,8 @@
 </style>
 </head>
 <body>
-<div class="header">
+	<div class="header">
+
 		<div class="container">
 			
 			<div class="logo">
@@ -33,8 +34,9 @@
 			</div>
 			<div class="head-t">
 				<ul class="card">
-					<li><a href="login.html" ><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
-					<li><a href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="loginLi"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
+					<li id ="signLi"><a href="signup.html" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="logoutLi" style="display: none;"><a href="#" onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng Xuất</a></li>
 				</ul>	
 			</div>
 			
@@ -43,101 +45,97 @@
 					<li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
 				</ul>	
 			</div>
-	
-
-			<div class="nav-top">
-				<nav class="navbar navbar-default">
-				
-				<div class="navbar-header nav_2">
-					<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div> 
-
-				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-					<ul class="nav navbar-nav ">
-						<li class=" active"><a href="index.html" class="hyper "><span>Home</span></a></li>	
-						
-						<li class="dropdown ">
-							<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><i class="fa-solid fa-boxes-stacked"></i><span> PC Component<b class="caret"></b></span></a>
-							<ul class="dropdown-menu multi">
-								<div class="row">
-									<div class="col-sm-3">
-										<ul class="multi-column-dropdown">
 		
-											<li><a href="mainboard.html"><i class="fa-solid fa-microchip"></i>Mainboard</a></li>
-											<li><a href="cpu.html"><i class="fa-solid fa-microchip"></i></i>CPU</a></li>
-											<li><a href="ram.html"> <i class="fa-solid fa-memory"></i></i>RAM</a></li>
-											<li><a href="gpu.html"><i class="fa-solid fa-microchip"></i></i>GPU</a></li>
-									
-										</ul>
-									
-									</div>
-									<div class="col-sm-3">
-									
-										<ul class="multi-column-dropdown">
-											<li><a href="ssd.html"><i class="fa-solid fa-hard-drive"></i></i>SSD</a></li>
-											<li><a href="hdd.html"><i class="fa-solid fa-hard-drive"></i></i>HDD</a></li>
-											<li><a href="PowerSupply.html"><i class="fa-solid fa-plug"></i></i>Power Supply</a></li>
-											<li><a href="PCcase.html"><i class="fa-solid fa-computer"></i></i>PC Case</a></li>
-											<li><a href="fan_liquidcooling.html"><i class="fa-solid fa-temperature-low"></i></i>Fan/Liquid Cooling</a></li>
-									
-										</ul>
-									
-									</div>
-									<div class="col-sm-3">
 
-									</div>
-									<div class="clearfix"></div>
-								</div>	
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><i class="fa-solid fa-gears"></i><span> Gaming Gear<b class="caret"></b></span></a>
-							<ul class="dropdown-menu multi multi1">
-								<div class="row">
-									<div class="col-sm-3">
-										<ul class="multi-column-dropdown">
-											<li><a href="minitor.html"><i class="fa-solid fa-desktop"></i></i>Monitor</a></li>
-											<li><a href="keyboard.html"><i class="fa-solid fa-keyboard"></i></i>Keyboard</a></li>
+				<div class="nav-top">
+					<nav class="navbar navbar-default">
+					
+					<div class="navbar-header nav_2">
+						<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div> 
 
-										</ul>
+					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+						<ul class="nav navbar-nav ">
+							<li class=" dropdown"><a href="index.html" class="hyper "><span>Home</span></a></li>	
+							
+							<li class="active ">
+								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><i class="fa-solid fa-boxes-stacked"></i><span> PC Component<b class="caret"></b></span></a>
+								<ul class="dropdown-menu multi">
+									<div class="row">
+										<div class="col-sm-3">
+											<ul class="multi-column-dropdown">
+			
+												<li><a href="mainboard.html"><i class="fa-solid fa-microchip"></i>Mainboard</a></li>
+												<li><a href="cpu.html"><i class="fa-solid fa-microchip"></i></i>CPU</a></li>
+												<li><a href="ram.html"> <i class="fa-solid fa-memory"></i></i>RAM</a></li>
+												<li><a href="gpu.html"><i class="fa-solid fa-microchip"></i></i>GPU</a></li>
 										
-									</div>
-									<div class="col-sm-3">
+											</ul>
 										
-										<ul class="multi-column-dropdown">
-											<li><a href="mouse.html"><i class="fa-sharp fa-solid fa-computer-mouse"></i></i>Mouse</a></li>
-											<li><a href="headset.html"><i class="fa-solid fa-headset"></i></i>Headset</a></li>
-										</ul>
+										</div>
+										<div class="col-sm-3">
 										
-									</div>
-									<div class="col-sm-3">
+											<ul class="multi-column-dropdown">
+												<li><a href="ssd.html"><i class="fa-solid fa-hard-drive"></i></i>SSD</a></li>
+												<li><a href="hdd.html"><i class="fa-solid fa-hard-drive"></i></i>HDD</a></li>
+												<li><a href="PowerSupply.html"><i class="fa-solid fa-plug"></i></i>Power Supply</a></li>
+												<li><a href="PCcase.html"><i class="fa-solid fa-computer"></i></i>PC Case</a></li>
+												<li><a href="fan_liquidcooling.html"><i class="fa-solid fa-temperature-low"></i></i>Fan/Liquid Cooling</a></li>
 										
-									</div>
-									<div class="clearfix"></div>
-								</div>	
-							</ul>
-						</li>
-						<li><a href="contact.html" class="hyper"><i class="fa-solid fa-phone"></i><span> Liên Hệ</span></a></li>
-					</ul>
-				</div>
-				</nav>
-				 <div class="cart" >
-				
-					<span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
-				</div>
-			<div class="clearfix"></div>
-		</div>		
+											</ul>
+										
+										</div>
+										<div class="col-sm-3">
+
+										</div>
+										<div class="clearfix"></div>
+									</div>	
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><i class="fa-solid fa-gears"></i><span> Gaming Gear<b class="caret"></b></span></a>
+								<ul class="dropdown-menu multi multi1">
+									<div class="row">
+										<div class="col-sm-3">
+											<ul class="multi-column-dropdown">
+												<li><a href="minitor.html"><i class="fa-solid fa-desktop"></i></i>Monitor</a></li>
+												<li><a href="keyboard.html"><i class="fa-solid fa-keyboard"></i></i>Keyboard</a></li>
+
+											</ul>
+											
+										</div>
+										<div class="col-sm-3">
+											
+											<ul class="multi-column-dropdown">
+												<li><a href="mouse.html"><i class="fa-sharp fa-solid fa-computer-mouse"></i></i>Mouse</a></li>
+												<li><a href="headset.html"><i class="fa-solid fa-headset"></i></i>Headset</a></li>
+											</ul>
+											
+										</div>
+										<div class="col-sm-3">
+											
+										</div>
+										<div class="clearfix"></div>
+									</div>	
+								</ul>
+							</li>
+							<li><a href="contact.html" class="hyper"><i class="fa-solid fa-phone"></i><span> Liên Hệ</span></a></li>
+						</ul>
+					</div>
+					</nav>
+					 <div class="cart" >
+					
+						<span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+					</div>
+				<div class="clearfix"></div>
+			</div>		
 </div>
-  <!---->
-
-
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-    <script src="js/jquery.vide.min.js"></script>
+<script src="./js/LoginStatus.js"></script>
 </div>
 <div class="product">
     <div class="container">
@@ -151,11 +149,11 @@
                         <div class="col-md-3 pro-1">
                             <div class="col-m">
                             <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
-                                    <img src="images/product/sac1.jpg" class="img-responsive" alt="">
+                                    <img src="images/psu/sac1.jpg" class="img-responsive" alt="">
                                 </a>
                                 <div class="mid-1">
                                     <div class="women">
-                                        <h6>Sạc Laptop HP 19.5V-2.31A 45W Chân kim nhỏ, củ hình chữ nhật</h6>							
+                                        <h6>Sạc Laptop HP 19.5V-2.31A 45W Chân kim nhỏ</h6>							
                                     </div>
                                     <div class="mid-2">
                                         <p ><em class="item_price">290,000 VND</em></p>
@@ -173,7 +171,7 @@
                         <div class="col-md-3 pro-1">
                             <div class="col-m">
                             <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
-                                    <img src="images/product/sac4.jpg" class="img-responsive" alt="">
+                                    <img src="images/psu/sac4.jpg" class="img-responsive" alt="">
                                 </a>
                                 <div class="mid-1">
                                     <div class="women">
@@ -187,7 +185,7 @@
                                         <div class="clearfix"></div>
                                     </div>
                                         <div class="add add-2">
-                                       <button class="btn btn-danger my-cart-btn my-cart-b" data-id="5" data-name="ROG Strix GeForce RTX 2080 Ti OC" data-summary="summary 5" data-price="36990000" data-quantity="1" data-image="images/of4.png">Add to Cart</button>
+                                       <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -195,11 +193,11 @@
 						<div class="col-md-3 pro-1">
                             <div class="col-m">
                             <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
-                                    <img src="images/product/sac3.jpg" class="img-responsive" alt="">
+                                    <img src="images/psu/sac3.jpg" class="img-responsive" alt="">
                                 </a>
                                 <div class="mid-1">
                                     <div class="women">
-                                        <h6>Sạc Laptop Dell 19.5V/3.34A chân kim to, củ hình chữ nhật</h6>							
+                                        <h6>Sạc Laptop Dell 19.5V/3.34A chân kim to</h6>							
                                     </div>
                                     <div class="mid-2">
                                         <p ><em class="item_price">390,000 VND</em></p>
@@ -209,7 +207,7 @@
                                         <div class="clearfix"></div>
                                     </div>
                                         <div class="add add-2">
-                                       <button class="btn btn-danger my-cart-btn my-cart-b" data-id="5" data-name="ROG Strix GeForce RTX 2080 Ti OC" data-summary="summary 5" data-price="36990000" data-quantity="1" data-image="images/of4.png">Add to Cart</button>
+                                       <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -217,11 +215,11 @@
 						<div class="col-md-3 pro-1">
                             <div class="col-m">
                             <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
-                                    <img src="images/product/sac2.jpg" class="img-responsive" alt="">
+                                    <img src="images/psu/sac2.jpg" class="img-responsive" alt="">
                                 </a>
                                 <div class="mid-1">
                                     <div class="women">
-                                        <h6>Sạc Laptop Lenovo 20V - 2.25A Chân nhỏ 4.0 x 1.7mm củ vuông</h6>							
+                                        <h6>Sạc Laptop Lenovo 20V - 2.25A Chân nhỏ 4.0</h6>							
                                     </div>
                                     <div class="mid-2">
                                         <p ><em class="item_price">250,000 VND</em></p>
@@ -231,9 +229,124 @@
                                         <div class="clearfix"></div>
                                     </div>
                                         <div class="add add-2">
-                                       <button class="btn btn-danger my-cart-btn my-cart-b" data-id="5" data-name="ROG Strix GeForce RTX 2080 Ti OC" data-summary="summary 5" data-price="36990000" data-quantity="1" data-image="images/of4.png">Add to Cart</button>
+                                       <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+						<div class="col-md-3 pro-1">
+                            <div class="col-m">
+                            <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
+                                    <img src="images/psu/psu1.webp" class="img-responsive" alt="">
+                                </a>
+                                <div class="mid-1">
+                                    <div class="women">
+                                        <h6>( 450W ) Nguồn Gigabyte P450B - 80 Plus Bronze</h6>							
+                                    </div>
+                                    <div class="mid-2">
+                                        <p ><em class="item_price">250,000 VND</em></p>
+                                          <div class="block">
+                                            <div class="starbox small ghosting"> </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                        <div class="add add-2">
+                                       <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
+                                    </div>
+                                </div>
+								
+                            </div>
+                        </div>
+						<div class="col-md-3 pro-1">
+                            <div class="col-m">
+                            <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
+                                    <img src="images/psu/psu2.webp" class="img-responsive" alt="">
+                                </a>
+                                <div class="mid-1">
+                                    <div class="women">
+                                        <h6>Nguồn CoolerMaster MWE 650 BRONZE - V2 230V</h6>							
+                                    </div>
+                                    <div class="mid-2">
+                                        <p ><em class="item_price">250,000 VND</em></p>
+                                          <div class="block">
+                                            <div class="starbox small ghosting"> </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                        <div class="add add-2">
+                                       <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
+                                    </div>
+                                </div>
+								
+                            </div>
+                        </div>
+						<div class="col-md-3 pro-1">
+                            <div class="col-m">
+                            <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
+                                    <img src="images/psu/psu3.webp" class="img-responsive" alt="">
+                                </a>
+                                <div class="mid-1">
+                                    <div class="women">
+                                        <h6>Nguồn GIGABYTE UD850GM 80 Plus Gold</h6>							
+                                    </div>
+                                    <div class="mid-2">
+                                        <p ><em class="item_price">250,000 VND</em></p>
+                                          <div class="block">
+                                            <div class="starbox small ghosting"> </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                        <div class="add add-2">
+                                       <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
+                                    </div>
+                                </div>
+								
+                            </div>
+                        </div>
+						<div class="col-md-3 pro-1">
+                            <div class="col-m">
+                            <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
+                                    <img src="images/psu/psu4.webp" class="img-responsive" alt="">
+                                </a>
+                                <div class="mid-1">
+                                    <div class="women">
+                                        <h6>Nguồn CM V850 SFX - 80 Plus Gold - Full Modular</h6>							
+                                    </div>
+                                    <div class="mid-2">
+                                        <p ><em class="item_price">250,000 VND</em></p>
+                                          <div class="block">
+                                            <div class="starbox small ghosting"> </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                        <div class="add add-2">
+                                       <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
+                                    </div>
+                                </div>
+								
+                            </div>
+                        </div>
+						<div class="col-md-3 pro-1">
+                            <div class="col-m">
+                            <a href="#" data-toggle="modal" data-target="#myModal17" class="offer-img">
+                                    <img src="images/psu/psu5.webp" class="img-responsive" alt="">
+                                </a>
+                                <div class="mid-1">
+                                    <div class="women">
+                                        <h6>Nguồn ASUS ROG Strix 850G - 80 Plus Gold - Full Modular</h6>							
+                                    </div>
+                                    <div class="mid-2">
+                                        <p ><em class="item_price">250,000 VND</em></p>
+                                          <div class="block">
+                                            <div class="starbox small ghosting"> </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                        <div class="add add-2">
+                                       <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
+                                    </div>
+                                </div>
+								
                             </div>
                         </div>
     </div>

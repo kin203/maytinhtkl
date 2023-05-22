@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="icon" href="images/logo-1.png">
-<title>TKL Computer</title>
+<title>SSD</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="TKL Store, Computer Store, TKL Computer Store, Computer Shop, TKL Computer Shop, TKL Shop" />
@@ -34,8 +34,9 @@
 			</div>
 			<div class="head-t">
 				<ul class="card">
-					<li><a href="login.html" ><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
-					<li><a href="#" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="loginLi"><a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>Đăng Nhập</a></li>
+					<li id ="signLi"><a href="signup.html" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng Ký</a></li>
+					<li id="logoutLi" style="display: none;"><a href="#" onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng Xuất</a></li>
 				</ul>	
 			</div>
 			
@@ -60,9 +61,9 @@
 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav ">
-							<li class=" active"><a href="index.html" class="hyper "><span>Home</span></a></li>	
+							<li class=" dropdown"><a href="index.html" class="hyper "><span>Home</span></a></li>	
 							
-							<li class="dropdown ">
+							<li class="active ">
 								<a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><i class="fa-solid fa-boxes-stacked"></i><span> PC Component<b class="caret"></b></span></a>
 								<ul class="dropdown-menu multi">
 									<div class="row">
@@ -134,11 +135,7 @@
 				<div class="clearfix"></div>
 			</div>		
 </div>
-  <!--script-->
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-    <script src="js/jquery.vide.min.js"></script>
-  <!--script-->
-
+<script src="./js/LoginStatus.js"></script>
 </div>
 <div class="product">
     <div class="container">
@@ -222,7 +219,7 @@
                                 </a>
                                 <div class="mid-1">
                                     <div class="women">
-                                        <h6>Ổ cứng SSD Lexar NM620 512GB M.2 2280 PCIe 3.0x4 </h6>							
+                                        <h6>Ổ cứng SSD Lexar NM620 512GB M.2 2280 PCIe 3.0x4 M.2 2280 </h6>							
                                     </div>
                                     <div class="mid-2">
                                         <p ><em class="item_price">1,199,000 VND</em></p>
